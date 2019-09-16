@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="MaoEdit.MyMemoBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaoEdit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Height="28" DockPanel.Dock="Bottom">
+
+            <ToggleButton Command="local:MyMemoBox.Command_UTF8" Name="Btn_1_UTF8" Width="48" Template="{StaticResource MyToggleButtonTemple}" IsChecked="True">UTF-8</ToggleButton>
+            <ToggleButton Command="local:MyMemoBox.Command_GB" Name="Btn_1_GB" Width="48" Template="{StaticResource MyToggleButtonTemple}">GB</ToggleButton>
+            <ToggleButton Command="local:MyMemoBox.Command_BIG" Name="Btn_1_BIG" Width="48" Template="{StaticResource MyToggleButtonTemple}">BIG</ToggleButton>
+            <Separator Height="0" Width="10"/>
+            <ToggleButton Command="local:MyMemoBox.Command_CR" Name="Btn_2_CR" Width="48" Template="{StaticResource MyToggleButtonTemple}" IsChecked="True">CR</ToggleButton>
+            <ToggleButton Command="local:MyMemoBox.Command_LF" Name="Btn_2_LF" Width="48" Template="{StaticResource MyToggleButtonTemple}">LF</ToggleButton>
+            <Separator Height="0" Width="10"/>
+            <Button Command="local:MyMemoBox.Command_FONT" Name="Btn_3_FONT" Width="48" Template="{StaticResource MyButtonTemple}" Background="{StaticResource Brush_Control_Normal}" >FONT</Button>
+          
+        </StackPanel>
+        <Border DockPanel.Dock="Bottom" Height="1" BorderThickness="0,0,0,1" BorderBrush="LightGray"/>
+        <TextBox x:Name="MyLineNumberLabel"
+               DockPanel.Dock="Left" Width="Auto" MinWidth="48"
+               Padding="10,0,10,0"
+               BorderThickness="0" 
+               Foreground="LightGray"
+               Background="WhiteSmoke"/>
+        <TextBox 
+            x:Name="MyTextBox"
+            VerticalScrollBarVisibility="Auto" 
+            TextWrapping="Wrap" 
+            AcceptsReturn="True" 
+            BorderBrush="LightGray" 
+            BorderThickness="0"
+            Padding="10,0,10,0"
+            ScrollViewer.ScrollChanged="ScrollChanged"
+            DockPanel.Dock="Top" TextChanged="MyTextBox_TextChanged" LayoutUpdated="MyTextBox_LayoutUpdated"/>
+
+    </DockPanel>
+</UserControl>

@@ -1,2 +1,2 @@
 # MaoEdit
-a personal tool for edit
+a personal tool as a clipboard with multiple contents

@@ -81,7 +81,8 @@
     </ControlTemplate>
     
     <ControlTemplate x:Key="MyTabTemple" TargetType="{x:Type TabControl}">
-        <Grid 
+        <Border BorderBrush="LightGray" BorderThickness="1">
+            <Grid             
             KeyboardNavigation.TabNavigation="Local" 
             Background="{StaticResource Brush_Control_Background}">
             <Grid.ColumnDefinitions>
@@ -141,7 +142,8 @@
                               Margin="0"
                               ContentSource="SelectedContent" />
             </Border>
-        </Grid>
+            </Grid>
+        </Border>
     </ControlTemplate>
     
     <ControlTemplate x:Key="MyTabItemTemple" TargetType="{x:Type TabItem}">

@@ -84,7 +84,6 @@ namespace MaoEdit
             }
         }
 
-
         private void MainTabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (MainTabControl.SelectedItem!=null)

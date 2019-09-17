@@ -182,13 +182,13 @@ namespace MaoEdit
         }
 
         private void MyTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {            
             MakeLineNumber();
             RedrawLineNumber();
         }
 
         private void MyTextBox_LayoutUpdated(object sender, EventArgs e)
-        {
+        {            
             MakeLineNumber();
             RedrawLineNumber();
         }
